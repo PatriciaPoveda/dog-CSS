@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+.container {
+  height: 600px;
+  width: 400px;
+  margin: 100px auto;
+  border: white solid 2px;
+}
+.head {
+  background-color: #e59e5f;
+  height: 230px;
+  width: 180px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+  margin-top: 80px;
+  animation: rotate 3s infinite ease-in-out alternate;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25%,
+  50% {
+    transform: rotate(10deg);
+  }
+  50%,
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+.head__ears {
+  margin: auto;
+  height: 100px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+.head__ears--ear {
+  height: 0;
+  width: 0;
+  border-left: solid 80px #e59e5f;
+  border-bottom: solid 40px #e59e5f;
+  border-top: solid 40px transparent;
+  border-right: solid 60px transparent;
+  border-radius: 10px;
+}
+.ear1 {
+  transform: rotate(-130deg);
+  position: relative;
+  left: -80px;
+  top: -40px;
+  z-index: 2;
+}
+.ear2 {
+  transform: scaleX(-1) rotate(-130deg);
+  position: relative;
+  left: -20px;
+  top: -40px;
+  z-index: 2;
+}
+.head__front {
+  height: 150px;
+  width: 40px;
+  margin: auto;
+  background-color: #efecd5;
+  position: relative;
+  border-radius: 7px;
+  transform: translateY(-100px);
+}
+.head__eyes {
+  margin: auto;
+  position: relative;
+  height: 30px;
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  top: -150px;
+}
+.head__eyes--eye {
+  height: 15px;
+  width: 40px;
+  background-color: white;
+  border-radius: 70px 70px 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iris {
+  height: 17px;
+  width: 17px;
+  background-color: green;
+  border-radius: 50%;
+}
+.pupil {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 3px auto;
+}
+.head__boxNose {
+  margin: auto;
+  position: relative;
+  height: 120px;
+  width: 120px;
+  border-radius: 40px 40px 60px 60px;
+  background-color: #efecd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -150px;
+}
+.head__boxNose--nose {
+  height: 50px;
+  width: 60px;
+  border-radius: 20px 20px 50px 50px;
+  background-color: #dd968d;
+}
+.head__boxNose--nose::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  left: 20px;
+  background-color: #9a918d;
+  top: 95px;
+  z-index: -1;
+  border-radius: 0 0 60% 60%;
+}
+.head__tongue {
+  position: relative;
+  height: 90px;
+  width: 50px;
+  background-color: #dd968d;
+  border-radius: 30px;
+  margin: auto;
+  top: -190px;
+  z-index: -1;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: 0.4;
+  animation: tongue 3s infinite linear alternate;
+}
+@keyframes tongue {
+  0%,
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  75% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.body {
+  height: 300px;
+  width: 230px;
+  background-color: #efecd5;
+  margin: -50px auto;
+  border-radius: 40% 40% 5px 5px;
+  overflow: hidden;
+}
+.body::before {
+  content: "";
+  position: absolute;
+  top: 270px;
+  background-color: #efecd5;
+  height: 200px;
+  width: 30px;
+  border-radius: 50% 50% 10px 10px;
+  z-index: -1;
+  transform-origin: bottom;
+  animation: tail 0.5s infinite linear alternate;
+}
+.body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 80px;
+  width: 30px;
+  background-color: #e59e5f;
+  top: 390px;
+  border-radius: 50% 30% 10px 10px;
+  transform-origin: bottom;
+  animation: tail 0.5s infinite linear alternate;
+}
+
+@keyframes tail {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.body__neck {
+  margin: auto;
+  height: 80px;
+  width: 130px;
+  border-radius: 0 0 50% 50%;
+  background-color: #ccc;
+}
+.body__legs {
+  /* border: 15px; */
+  height: 180px;
+  width: 140px;
+  background-color: black;
+  margin: 70px auto;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.body__stains {
+  margin: auto;
+  position: relative;
+  height: 130px;
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  top: -370px;
+  z-index: 6;
+}
+.body__stains--stain {
+  height: 130px;
+  width: 30px;
+  background-color: #e59e5f;
+  border-radius: 0 10px 20px 10px;
+}
