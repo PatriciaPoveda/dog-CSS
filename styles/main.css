@@ -9,8 +9,8 @@ body {
 .container {
   height: 600px;
   width: 400px;
-  margin: 100px auto;
-  border: white solid 2px;
+  margin: 50px auto;
+  border: black solid 2px;
 }
 .head {
   background-color: #e59e5f;
@@ -20,7 +20,7 @@ body {
   margin: auto;
   position: relative;
   z-index: 5;
-  margin-top: 80px;
+  margin-top: 95px;
   animation: rotate 3s infinite ease-in-out alternate;
 }
 @keyframes rotate {
@@ -191,10 +191,10 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  height: 80px;
+  height: 110px;
   width: 30px;
   background-color: #e59e5f;
-  top: 390px;
+  top: 360px;
   border-radius: 50% 30% 10px 10px;
   transform-origin: bottom;
   animation: tail 0.5s infinite linear alternate;
