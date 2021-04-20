@@ -55,6 +55,14 @@ body {
   border-right: solid 60px transparent;
   border-radius: 10px;
 }
+.head__ears--ear::before {
+  content: "";
+  border-left: solid 50px #dd968d;
+  border-bottom: solid 15px #dd968d;
+  border-top: solid 15px transparent;
+  border-right: solid 40px transparent;
+  border-radius: 10px;
+}
 .ear1 {
   transform: rotate(-130deg);
   position: relative;
@@ -62,12 +70,20 @@ body {
   top: -40px;
   z-index: 2;
 }
+.ear1::before {
+  position: relative;
+  left: -60px;
+  z-index: 2;
+}
 .ear2 {
   transform: scaleX(-1) rotate(-130deg);
   position: relative;
   left: -20px;
   top: -40px;
-  z-index: 2;
+}
+.ear2::before {
+  position: relative;
+  left: -60px;
 }
 .head__front {
   height: 150px;
@@ -96,18 +112,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+.eye1 {
+  transform: rotate(10deg);
+}
+
+.eye2 {
+  transform: rotate(-10deg);
+}
 .iris {
   height: 17px;
   width: 17px;
-  background-color: green;
+  background-color: rgb(229, 231, 102);
   border-radius: 50%;
 }
 .pupil {
-  height: 10px;
-  width: 10px;
+  height: 13px;
+  width: 13px;
   background-color: black;
   border-radius: 50%;
-  margin: 3px auto;
+  margin: 2px auto;
 }
 .head__boxNose {
   margin: auto;
@@ -142,7 +165,7 @@ body {
   position: relative;
   height: 90px;
   width: 50px;
-  background-color: #dd968d;
+  background-color: #ce8b82;
   border-radius: 30px;
   margin: auto;
   top: -190px;
@@ -217,11 +240,10 @@ body {
   background-color: #ccc;
 }
 .body__legs {
-  /* border: 15px; */
-  height: 180px;
-  width: 140px;
+  height: 160px;
+  width: 130px;
   background-color: black;
-  margin: 70px auto;
+  margin: 80px auto;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
